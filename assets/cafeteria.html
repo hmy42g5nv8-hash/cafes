@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" type="image/png" href="assets/bolsa-de-cafe.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aroma café | La Experiencia del Café Perfecto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">Aroma<span>Cafe</span></a>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#especialidades">Especialidades</a></li>
+                    <li><a href="#menu">Menú</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1>Aroma Café </h1>
+            <p>Donde cada taza cuenta una historia de pasión y sabor</p>
+            <a href="#menu" class="btn">Explorar Menú</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Lo Que Nos Hace Especiales</h2>
+                <p>Café artesanal de la más alta calidad</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <h3>Granos Premium</h3>
+                    <p>Seleccionamos los mejores granos de café de origen único, tostados artesanalmente.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>100% Orgánico</h3>
+                    <p>Café cultivado sin pesticidas, respetando el medio ambiente y las comunidades.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Baristas Expertos</h3>
+                    <p>Nuestro equipo está certificado y apasionado por crear la taza perfecta.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Ambiente Acogedor</h3>
+                    <p>Un espacio diseñado para relajarte, trabajar o compartir con amigos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="recipes" id="menu">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestras Especialidades</h2>
+                <p>Bebidas preparadas con amor y dedicación</p>
+            </div>
+            <div class="recipes-grid">
+                <div class="recipe-card" onclick="showRecipe('espresso')">
+                    <div class="recipe-img">
+                        <img src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?ixlib=rb-4.0.3" alt="Espresso">
+                    </div>
+                    <div class="recipe-content">
+                        <span class="recipe-tag">Clásico</span>
+                        <h3>Espresso Perfecto</h3>
+                        <div class="recipe-info">
+                            <span><i class="fas fa-fire"></i> Intenso</span>
+                            <span><i class="fas fa-dollar-sign"></i> $45</span>
+                        </div>
+                        <p>Shot doble de espresso con crema perfecta y notas de chocolate.</p>
+                    </div>
+                </div>
+
+                <div class="recipe-card" onclick="showRecipe('cappuccino')">
+                    <div class="recipe-img">
+                        <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?ixlib=rb-4.0.3" alt="Cappuccino">
+                    </div>
+                    <div class="recipe-content">
+                        <span class="recipe-tag">Popular</span>
+                        <h3>Cappuccino Artesanal</h3>
+                        <div class="recipe-info">
+                            <span><i class="fas fa-fire"></i> Medio</span>
+                            <span><i class="fas fa-dollar-sign"></i> $55</span>
+                        </div>
+                        <p>Espresso con leche espumada y arte latte personalizado.</p>
+                    </div>
+                </div>
+
+                <div class="recipe-card" onclick="showRecipe('latte')">
+                    <div class="recipe-img">
+                        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?ixlib=rb-4.0.3" alt="Latte">
+                    </div>
+                    <div class="recipe-content">
+                        <span class="recipe-tag">Cremoso</span>
+                        <h3>Latte de Vainilla</h3>
+                        <div class="recipe-info">
+                            <span><i class="fas fa-fire"></i> Suave</span>
+                            <span><i class="fas fa-dollar-sign"></i> $60</span>
+                        </div>
+                        <p>Café con leche y jarabe de vainilla natural.</p>
+                    </div>
+                </div>
+
+                <div class="recipe-card" onclick="showRecipe('cold_brew')">
+                    <div class="recipe-img">
+                        <img src="https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?ixlib=rb-4.0.3" alt="Cold Brew">
+                    </div>
+                    <div class="recipe-content">
+                        <span class="recipe-tag">Refrescante</span>
+                        <h3>Cold Brew Premium</h3>
+                        <div class="recipe-info">
+                            <span><i class="fas fa-snowflake"></i> Frío</span>
+                            <span><i class="fas fa-dollar-sign"></i> $65</span>
+                        </div>
+                        <p>Café filtrado en frío durante 18 horas, sabor único.</p>
+                    </div>
+                </div>
+<div class="recipe-card" onclick="showRecipe('mocha')">
+    <div class="recipe-img">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80" 
+             alt="Mocha Chocolate Belga">
+    </div>
+    <div class="recipe-content">
+        <span class="recipe-tag">Dulce</span>
+        <h3>Mocha Chocolate Belga</h3>
+        <div class="recipe-info">
+            <span><i class="fas fa-fire"></i> Medio</span>
+            <span><i class="fas fa-dollar-sign"></i> $70</span>
+        </div>
+        <p>Espresso con chocolate belga y crema batida.</p>
+    </div>
+</div>
+
+
+                <div class="recipe-card" onclick="showRecipe('macchiato')">
+                    <div class="recipe-img">
+                        <img src="https://images.unsplash.com/photo-1489533119213-66a5cd877091?ixlib=rb-4.0.3" alt="Macchiato">
+                    </div>
+                    <div class="recipe-content">
+                        <span class="recipe-tag">Intenso</span>
+                        <h3>Caramel Macchiato</h3>
+                        <div class="recipe-info">
+                            <span><i class="fas fa-fire"></i> Fuerte</span>
+                            <span><i class="fas fa-dollar-sign"></i> $65</span>
+                        </div>
+                        <p>Espresso marcado con leche y caramelo artesanal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="recipe-steps" class="recipe-steps">
+        <div class="steps-container">
+            <span class="close-steps" onclick="closeRecipe()">&times;</span>
+            <div id="steps-content"></div>
+        </div>
+    </div>
+
+    <section class="benefits" id="especialidades">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros Números</h2>
+                <p>La experiencia que nos respalda</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-number">15+</div>
+                    <h3>Años de Experiencia</h3>
+                    <p>Perfeccionando el arte del café</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-number">50+</div>
+                    <h3>Variedades de Café</h3>
+                    <p>De todo el mundo</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-number">100%</div>
+                    <h3>Satisfacción</h3>
+                    <p>Clientes felices cada día</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-number">10k+</div>
+                    <h3>Tazas Servidas</h3>
+                    <p>Mensualmente</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonios">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros Clientes Opinan</h2>
+                <p>Experiencias auténticas de amantes del café</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"El mejor café de la ciudad. El ambiente es perfecto para trabajar y el cappuccino es simplemente delicioso. ¡Vengo todos los días!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="María González">
+                        </div>
+                        <div class="author-info">
+                            <h4>María González</h4>
+                            <p>Cliente frecuente</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Como experto en café, puedo decir que Café Aroma sabe lo que hace. Sus granos son de primera calidad y los baristas son verdaderos artistas."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Roberto Silva">
+                        </div>
+                        <div class="author-info">
+                            <h4>Roberto Silva</h4>
+                            <p>Catador profesional</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Mi lugar favorito para relajarme. El cold brew es increíble y el personal siempre te recibe con una sonrisa. ¡Totalmente recomendado!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Andrea Martínez">
+                        </div>
+                        <div class="author-info">
+                            <h4>Andrea Martínez</h4>
+                            <p>Amante del café</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="video-section" id="video">
+    <div class="container">
+        <div class="section-title">
+            <h2>Descubre Nuestra Historia</h2>
+            <p>Un recorrido por la pasión que nos mueve cada día</p>
+        </div>
+        <div class="video-container-wrapper">
+            <div class="video-content">
+                <div class="video-player">
+
+
+                    <video controls poster="thumbnail.jpg">
+                        <source src="assets/VIDEO-2025-11-24-01-43-10.mp4" type="video/mp4">
+                        <source src="tu-video.webm" type="video/webm">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                    </div>
+                    <div class="video-description">
+                    <h3>Nuestra Pasión por el Café</h3>
+                    <p>Desde nuestros inicios en , hemos dedicado cada día a perfeccionar el arte del café. 
+                       Conoce el proceso detrás de cada taza, desde la selección de los granos hasta el momento 
+                       en que llega a tus manos.</p>
+                    <div class="video-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-seedling"></i>
+                            <span>Origen sostenible</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-fire"></i>
+                            <span>Tostado artesanal</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-mug-hot"></i>
+                            <span>Preparación experta</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="qr-section">
+        <div class="container">
+            <div class="qr-grid">
+                <div class="qr-container">
+                    <h3>¡Síguenos en redes!</h3>
+                    <img src="assets/IMG_1380.jpg" 
+                         alt="QR Code para Café Aroma" 
+                         style="width: 150px;">
+                    <p>Escanea y descubre promociones exclusivas</p>
+                </div>
+                <div class="qr-container">
+                    <h3>¡Chatea con nosotros!</h3>
+                    <img src="assets/codigo QR.jpg" 
+                         alt="QR Code WhatsApp" 
+                         style="width: 150px;">
+                    <p>Contáctanos por WhatsApp</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Encuéntranos</h2>
+                <p>CBTis 229 - Puebla, México</p>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.4842847867744!2d-98.19944492516806!3d19.04472198212486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfc0d8c7777777%3A0x8888888888888888!2sCBTis%20229!5e0!3m2!1ses!2smx!4v1234567890123!5m2!1ses!2smx" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0; border-radius: 10px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Visítanos</h2>
+                    <p>Ven a disfrutar de la mejor experiencia de café. Estamos abiertos todos los días.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Ubicación</h4>
+                                <p>CBTis 229, Tehuacan, México</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4>Horario</h4>
+                                <p>Lun - Dom: 7:00 AM - 10:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Teléfono</h4>
+                                <p>+52 238 198 2812</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>aromacafe@Gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Teléfono">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Mensaje o reservación" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">Café<span>Aroma</span></div>
+                    <p>Pasión por el café desde 2008. Creando momentos especiales, una taza a la vez.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Enlaces</h3>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#especialidades">Especialidades</a></li>
+                        <li><a href="#menu">Menú</a></li>
+                        <li><a href="#testimonios">Testimonios</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Menú</h3>
+                    <ul>
+                        <li><a href="#">Café Caliente</a></li>
+                        <li><a href="#">Café Frío</a></li>
+                        <li><a href="#">Repostería</a></li>
+                        <li><a href="#">Desayunos</a></li>
+                        <li><a href="#">Granos para llevar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Recibe nuestras promociones y novedades cada semana.</p>
+                    <form>
+                        <input type="email" placeholder="Tu email" required>
+                        <button type="submit" class="btn">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Café Aroma. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <div id="chatbot-toggle" class="chatbot-toggle">
+        <i class="fas fa-comments"></i>
+    </div>
+
+    <div id="chatbot-container" class="chatbot-container">
+        <div class="chatbot-header">
+            <h3>☕ Asistente Aroma Cafe</h3>
+            <span id="chatbot-close" class="chatbot-close">&times;</span>
+        </div>
+        <div id="chatbot-messages" class="chatbot-messages">
+            <div class="bot-message">
+                <p>¡Hola! 👋 Soy tu asistente virtual de Aroma Cafe. ¿En qué puedo ayudarte hoy?</p>
+                <div class="quick-replies">
+                    <button onclick="sendQuickReply('menu')">Ver menú</button>
+                    <button onclick="sendQuickReply('horario')">Horario</button>
+                    <button onclick="sendQuickReply('ubicacion')">Ubicación</button>
+                </div>
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbot-user-input" placeholder="Escribe tu mensaje...">
+            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        const coffeeRecipes = {
+            espresso: {
+                title: "Espresso Perfecto",
+                image: "https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?ixlib=rb-4.0.3",
+                price: "$45",
+                intensity: "Intenso",
+                ingredients: [
+                    "18g de café molido fino",
+                    "30ml de agua a 93°C",
+                    "Presión de 9 bares",
+                    "Tiempo de extracción: 25-30 segundos"
+                ],
+                instructions: [
+                    "Precalienta la taza de espresso con agua caliente.",
+                    "Muele los granos de café justo antes de preparar para máxima frescura.",
+                    "Distribuye uniformemente el café en el portafiltro.",
+                    "Presiona con 15kg de fuerza para crear una superficie uniforme.",
+                    "Extrae durante 25-30 segundos hasta obtener un color caramelo.",
+                    "Sirve inmediatamente para disfrutar de la crema perfecta."
+                ]
+            },
+            cappuccino: {
+                title: "Cappuccino Artesanal",
+                image: "https://images.unsplash.com/photo-1572442388796-11668a67e53d?ixlib=rb-4.0.3",
+                price: "$55",
+                intensity: "Medio",
+                ingredients: [
+                    "1 shot doble de espresso (60ml)",
+                    "120ml de leche entera",
+                    "Espuma de leche cremosa",
+                    "Opcional: Cacao en polvo para decorar"
+                ],
+                instructions: [
+                    "Prepara un shot doble de espresso en una taza de 180ml.",
+                    "Vaporiza la leche hasta alcanzar 65°C, creando microespuma.",
+                    "Vierte la leche con movimiento circular para crear arte latte.",
+                    "La proporción ideal es 1/3 espresso, 1/3 leche, 1/3 espuma.",
+                    "Decora con un patrón de tu elección (corazón, rosetta, tulipán).",
+                    "Espolvorea ligeramente con cacao si lo deseas."
+                ]
+            },
+            latte: {
+                title: "Latte de Vainilla",
+                image: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?ixlib=rb-4.0.3",
+                price: "$60",
+                intensity: "Suave",
+                ingredients: [
+                    "1 shot doble de espresso",
+                    "200ml de leche",
+                    "15ml de jarabe de vainilla natural",
+                    "Espuma de leche ligera"
+                ],
+                instructions: [
+                    "Prepara el espresso en una taza grande de 240ml.",
+                    "Añade el jarabe de vainilla al espresso y mezcla.",
+                    "Calienta y vaporiza la leche hasta 65°C.",
+                    "Vierte la leche lentamente sobre el espresso.",
+                    "Añade una capa fina de espuma en la superficie.",
+                    "Decora con un patrón simple de arte latte."
+                ]
+            },
+            cold_brew: {
+                title: "Cold Brew Premium",
+                image: "https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?ixlib=rb-4.0.3",
+                price: "$65",
+                intensity: "Frío",
+                ingredients: [
+                    "100g de café molido grueso",
+                    "1 litro de agua fría filtrada",
+                    "18 horas de tiempo de infusión",
+                    "Hielo y leche opcional"
+                ],
+                instructions: [
+                    "Mezcla el café molido grueso con agua fría en un recipiente.",
+                    "Refrigera durante 18 horas, removiendo ocasionalmente.",
+                    "Filtra el café usando un filtro de papel o tela fina.",
+                    "El concentrado resultante puede diluirse al gusto.",
+                    "Sirve sobre hielo en un vaso alto.",
+                    "Añade leche o crema si lo prefieres más suave."
+                ]
+            },
+            mocha: {
+                title: "Mocha Chocolate Belga",
+                image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80",
+                price: "$70",
+                intensity: "Medio",
+                ingredients: [
+                    "1 shot doble de espresso",
+                    "30ml de chocolate belga derretido",
+                    "180ml de leche vaporizada",
+                    "Crema batida",
+                    "Virutas de chocolate para decorar"
+                ],
+                instructions: [
+                    "Derrite el chocolate belga en la taza de servir.",
+                    "Prepara el espresso y viértelo sobre el chocolate.",
+                    "Mezcla bien hasta integrar completamente el chocolate.",
+                    "Añade la leche vaporizada lentamente.",
+                    "Corona con crema batida generosamente.",
+                    "Decora con virutas de chocolate y sirve inmediatamente."
+                ]
+            },
+            macchiato: {
+                title: "Caramel Macchiato",
+                image: "https://images.unsplash.com/photo-1489533119213-66a5cd877091?ixlib=rb-4.0.3",
+                price: "$65",
+                intensity: "Fuerte",
+                ingredients: [
+                    "1 shot doble de espresso",
+                    "150ml de leche vaporizada",
+                    "20ml de jarabe de vainilla",
+                    "Salsa de caramelo casera",
+                    "Espuma de leche"
+                ],
+                instructions: [
+                    "Añade el jarabe de vainilla en el fondo de la taza.",
+                    "Vierte la leche vaporizada sobre el jarabe.",
+                    "Prepara el espresso y viértelo lentamente en el centro.",
+                    "El espresso debe 'marcar' la leche sin mezclarse completamente.",
+                    "Añade espuma de leche en la superficie.",
+                    "Finaliza con un generoso drizzle de caramelo en forma de rejilla."
+                ]
+            }
+        };
+
+        function showRecipe(recipeId) {
+            const recipe = coffeeRecipes[recipeId];
+            if (!recipe) return;
+
+            const content = `
+                <div class="recipe-header">
+                    <img src="${recipe.image}" alt="${recipe.title}">
+                    <h2>${recipe.title}</h2>
+                    <div class="time-info">
+                        <div class="time-item">
+                            <strong>Precio</strong>
+                            <p>${recipe.price}</p>
+                        </div>
+                        <div class="time-item">
+                            <strong>Intensidad</strong>
+                            <p>${recipe.intensity}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ingredients">
+                    <h3>Ingredientes</h3>
+                    <ul>
+                        ${recipe.ingredients.map(ing => `<li>${ing}</li>`).join('')}
+                    </ul>
+                </div>
+                <div class="instructions">
+                    <h3>Preparación</h3>
+                    <ol>
+                        ${recipe.instructions.map(step => `<li>${step}</li>`).join('')}
+                    </ol>
+                </div>
+            `;
+
+            document.getElementById('steps-content').innerHTML = content;
+            document.getElementById('recipe-steps').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeRecipe() {
+            document.getElementById('recipe-steps').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        document.getElementById('recipe-steps').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeRecipe();
+            }
+        });
+
+        // Chatbot functionality
+        const chatbotToggle = document.getElementById('chatbot-toggle');
+        const chatbotContainer = document.getElementById('chatbot-container');
+        const chatbotClose = document.getElementById('chatbot-close');
+        const chatbotMessages = document.getElementById('chatbot-messages');
+        const chatbotInput = document.getElementById('chatbot-user-input');
+
+        chatbotToggle.addEventListener('click', () => {
+            chatbotContainer.classList.toggle('active');
+            chatbotToggle.style.display = 'none';
+        });
+
+        chatbotClose.addEventListener('click', () => {
+            chatbotContainer.classList.remove('active');
+            chatbotToggle.style.display = 'flex';
+        });
+
+        chatbotInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        function sendMessage() {
+            const input = chatbotInput.value.trim();
+            if (!input) return;
+
+            addUserMessage(input);
+            chatbotInput.value = '';
+
+            setTimeout(() => {
+                const response = getBotResponse(input.toLowerCase());
+                addBotMessage(response);
+            }, 500);
+        }
+
+        function sendQuickReply(type) {
+            const messages = {
+                'menu': 'Quiero ver el menú',
+                'horario': '¿Cuál es su horario?',
+                'ubicacion': '¿Dónde están ubicados?'
+            };
+            
+            addUserMessage(messages[type]);
+            
+            setTimeout(() => {
+                const response = getBotResponse(type);
+                addBotMessage(response);
+            }, 500);
+        }
+
+        function addUserMessage(message) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'user-message';
+            messageDiv.innerHTML = `<p>${message}</p>`;
+            chatbotMessages.appendChild(messageDiv);
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+
+        function addBotMessage(message) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'bot-message';
+            messageDiv.innerHTML = `<p>${message}</p>`;
+            chatbotMessages.appendChild(messageDiv);
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+
+        function getBotResponse(input) {
+            const responses = {
+                'menu': '☕ Nuestras especialidades incluyen:\n\n• Espresso Perfecto - $45\n• Cappuccino Artesanal - $55\n• Latte de Vainilla - $60\n• Cold Brew Premium - $65\n• Mocha Chocolate Belga - $70\n• Caramel Macchiato - $65\n\n¿Te gustaría saber más sobre alguna bebida?',
+                'horario': '🕐 Nuestro horario es:\n\nLunes a Domingo\n7:00 AM - 10:00 PM\n\n¡Te esperamos todos los días!',
+                'ubicacion': '📍 Nos encontramos en:\n\nCBTis 229\nPuebla, México\n\n¿Necesitas indicaciones? Puedes ver nuestro mapa en la sección de contacto.'
+            };
+
+            if (responses[input]) {
+                return responses[input];
+            }
+
+            if (input.includes('hola') || input.includes('buenos') || input.includes('buenas')) {
+                return '¡Hola! 😊 Bienvenido a Café Aroma. ¿En qué puedo ayudarte hoy?';
+            }
+
+            if (input.includes('precio') || input.includes('costo') || input.includes('cuanto')) {
+                return 'Nuestros precios van desde $45 hasta $70 pesos. ¿Te gustaría ver el menú completo?';
+            }
+
+            if (input.includes('reserva') || input.includes('reservar')) {
+                return '📞 Para reservaciones puedes:\n\n• Llamarnos: +52 55 9876 5432\n• WhatsApp: Escanea nuestro código QR\n• Completar el formulario de contacto\n\n¿Prefieres algún método en particular?';
+            }
+
+            if (input.includes('gracias')) {
+                return '¡De nada! 😊 ¿Hay algo más en lo que pueda ayudarte?';
+            }
+
+            return 'Entiendo. Te puedo ayudar con:\n\n• Ver nuestro menú\n• Horarios de servicio\n• Ubicación\n• Hacer reservaciones\n\n¿Qué te gustaría saber?';
+        }
+    </script>
+</body>
+</html>
